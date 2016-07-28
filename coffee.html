@@ -57,7 +57,15 @@
     myRevenueMessage.innerHTML = "$0 For Now!";
 
     function makeCoffee() {
-        myImage.setAttribute('src', 'static/coffee_mug.jpg');
+        myImage.setAttribute('src', 'static/coffee_machine.jpg');
+        setTimeout(function () {
+            myImage.setAttribute('src', 'static/coffee_mug.jpg');
+        }, 1500);
+        console.log("set first timeout");
+        setTimeout(function () {
+            myImage.setAttribute('src', 'static/coffee_beans.jpg');
+        }, 4000);
+        console.log("set second timeout");
     }
 
     myImage.addEventListener('click', makeCoffee);
